@@ -1,0 +1,35 @@
+name: Para Seed
+type: profile
+description: 'Install with default paragraph types supporting Bootstrap layouts.'
+version: VERSION
+core: 8.x
+install:
+  - node
+  - block
+  - breakpoint
+  - ckeditor
+  - config
+  - contextual
+  - menu_link_content
+  - block_content
+  - quickedit
+  - editor
+  - help
+  - image
+  - menu_ui
+  - options
+  - path
+  - page_cache
+  - dynamic_page_cache
+  - big_pipe
+  - taxonomy
+  - dblog
+  - toolbar
+  - field_ui
+  - file
+  - views
+  - views_ui
+  - automated_cron
+themes:
+  - bartik
+  - claro
