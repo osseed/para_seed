@@ -1,0 +1,45 @@
+{
+    "name": "osseed/para_seed",
+    "description": "Installation profile for Drupal 8 supporting paragraphs with bootstrap layouts.",
+    "type": "drupal-profile",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "Tanmay Khedekar",
+            "email": "tanmay@osseed.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "repositories": [
+      {
+        "type": "composer",
+        "url": "https://packages.drupal.org/8"
+      }
+    ],
+    "extra": {
+      "installer-paths": {
+        "web/core": [
+          "type:drupal-core"
+        ],
+        "web/modules/contrib/{$name}": [
+          "type:drupal-module"
+        ],
+        "web/libraries/{$name}": [
+          "type:drupal-library"
+        ],
+        "web/profiles/contrib/{$name}": [
+          "type:drupal-profile"
+        ],
+        "web/themes/contrib/{$name}": [
+          "type:drupal-theme"
+        ],
+        "drush/contrib/{$name}": [
+          "type:drupal-drush"
+        ]
+      }
+    },
+    "require": {
+        "drupal/paragraphs": "^1.10"
+    }
+}
