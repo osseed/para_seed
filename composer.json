@@ -40,7 +40,10 @@
       }
     },
     "require": {
+        "drupal/admin_toolbar": "^2.0",
+        "drupal/config_update": "~1.0",
+        "drupal/config_ignore": "~2.0",
+        "drupal/swiftmailer": "~2.0",
         "drupal/paragraphs": "^1.10",
-        "drupal/admin_toolbar": "^2.0"
     }
 }

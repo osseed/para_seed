@@ -30,6 +30,9 @@ install:
   - views
   - views_ui
   - automated_cron
+  - mailsystem
+  - swiftmailer
+  - config_ignore
 themes:
   - bartik
   - claro
