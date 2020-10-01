@@ -3,3 +3,6 @@ filter_format: plain_text
 respect_format: false
 convert_mode: true
 character_set: UTF-8
+content_type: text/html
+text_format: plain_text
+generate_plain: false
