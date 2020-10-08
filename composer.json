@@ -7,6 +7,71 @@
         {
             "name": "Tanmay Khedekar",
             "email": "tanmay@osseed.com"
+        },
+        {
+          "type": "package",
+          "package": {
+            "name": "slick",
+            "version": "v1.8.1",
+            "type": "drupal-library",
+            "dist": {
+              "url": "https://github.com/kenwheeler/slick.git",
+              "type": "git",
+              "reference": "master"
+            }
+          }
+        },
+        {
+          "type": "package",
+          "package": {
+            "name": "blazy",
+            "version": "1.8.2",
+            "type": "drupal-library",
+            "dist": {
+              "url": "https://github.com/dinbror/blazy.git",
+              "type": "git",
+              "reference": "master"
+            }
+          }
+        },
+        {
+          "type": "package",
+          "package": {
+            "name": "dropzone",
+            "version": "v5.7.2",
+            "type": "drupal-library",
+            "dist": {
+              "url": "https://github.com/enyo/dropzone.git",
+              "type": "git",
+              "reference": "master"
+            }
+          }
+        },
+        {
+          "type": "package",
+          "package": {
+            "name": "masonry",
+            "version": "v4.2.2",
+            "type": "drupal-library",
+            "dist": {
+              "url": "https://github.com/desandro/masonry.git",
+              "type": "git",
+              "reference": "master"
+            }
+          }
+        },
+        {
+          "type": "package",
+          "package": {
+            "name": "imagesloaded",
+            "version": "v4.1.4",
+            "type": "drupal-library",
+            "dist": {
+              "url": "https://github.com/desandro/imagesloaded.git",
+              "type": "git",
+              "reference": "master"
+            }
+          }
         }
     ],
     "minimum-stability": "dev",
@@ -30,9 +95,7 @@
           "type:drupal-module"
         ],
         "web/libraries/{$name}": [
-          "type:drupal-library",
-          "type:bower-asset",
-          "type:npm-asset"
+          "type:drupal-library"
         ],
         "web/profiles/contrib/{$name}": [
           "type:drupal-profile"
@@ -42,22 +105,6 @@
         ],
         "drush/contrib/{$name}": [
           "type:drupal-drush"
-        ],
-        "web/libraries/masonry": ["npm-asset/masonry-layout"]
-      },
-      "drupal-libraries": {
-        "library-directory": "web/libraries",
-        "libraries": [
-          {"name": "objectfitpolyfill", "package": "bower-asset/objectfitpolyfill"},
-          {"name": "chartjs", "package": "bower-asset/chartjs"},
-          {"name": "c3","package": "bower-asset/c3"},
-          {"name": "d3", "package": "bower-asset/d3"},
-          {"name": "dropzone","package": "npm-asset/dropzone"},
-          {"name": "blazy", "package": "npm-asset/blazy"},
-          {"name": "slick", "package": "npm-asset/slick-carousel"},
-          {"name": "jquery-ui-touch-punch", "package": "bower-asset/jqueryui-touch-punch"},
-          {"name": "masonry", "package": "npm-asset/masonry-layout"},
-          {"name": "imagesloaded", "package": "npm-asset/imagesloaded"},
         ]
       }
     },
@@ -67,11 +114,6 @@
         "drupal/config_ignore": "~2.0",
         "drupal/swiftmailer": "~2.0",
         "drupal/varbase_media": "~7.0",
-        "drupal/varbase_heroslider_media": "~7.0",
-        "npm-asset/masonry-layout": "~4.0",
-        "npm-asset/imagesloaded": "~4.0",
-        "npm-asset/dropzone": "~4.0",
-        "npm-asset/blazy": "~1.0",
-        "npm-asset/slick-carousel": "~1.0"
+        "drupal/varbase_heroslider_media": "~7.0"
     }
 }
