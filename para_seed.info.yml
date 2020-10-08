@@ -31,6 +31,8 @@ install:
   - views_ui
   - automated_cron
   - admin_toolbar
+  - admin_toolbar_tools
+  - admin_toolbar_search
   - mailsystem
   - swiftmailer
   - config_ignore

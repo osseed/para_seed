@@ -1,0 +1,21 @@
+# ==============================================================================
+# List of extra Paraseed components, which they will be listed in the
+# Extra components form, when we install para_seed.
+# ==============================================================================
+config_bit:
+  type: list
+  for: para_seed.info.yml
+  when:
+    show_extra_components: true
+    list:
+      dependencies:
+        varbase_heroslider_media:
+          title: "Media Hero Slider"
+          description: "A slider that allows you to display video and/or image slides. It implements the universal \"Hero Slider\" to be used in your homepage. Built using <a href=\"https://www.drupal.org/project/slick\" target=\"_blank\">Slick Carousel</a>."
+          selected: false
+          config_form: false
+        para_seed_landing:
+          title: "Paraseed Landing Page (Paragraphs)"
+          description: "Provides the basis for Landing Pages using <a href=\"https://www.drupal.org/project/paragraphs\" target=\"_blank\">Paragraphs</a> module, which is built to include appealing stacked components.<br /><em>Note that Paraseed now is already shipped with a Landing Page content type via Layout Builder. You should enable this component (Paraseed Landing Page - Paragraphs) only if you want Landing Pages with Paragraphs instead of Layout Builder.</em>"
+          selected: false
+          config_form: false

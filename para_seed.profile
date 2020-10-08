@@ -7,6 +7,105 @@
 
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\file\Entity\File;
+use Symfony\Component\Yaml\Yaml;
+use Drupal\node\Entity\Node;
+use Drupal\para_seed\Form\AssemblerForm;
+use Drupal\para_seed\Config\ConfigBit;
+
+/**
+ * Implements hook_form_FORM_ID_alter() for install_configure_form().
+ *
+ * Allows the profile to alter the site configuration form.
+ */
+function para_seed_form_install_configure_form_alter(&$form, FormStateInterface $form_state) {
+  // Add a placeholder as example that one can choose an arbitrary site name.
+  $form['site_information']['site_name']['#attributes']['placeholder'] = t('Site Name');
+
+  // Default site email noreply@paraseed.com .
+  $form['site_information']['site_mail']['#default_value'] = 'noreply@paraseed.com';
+  $form['site_information']['site_mail']['#attributes']['style'] = 'width: 25em;';
+
+  // Default user 1 username should be 'admin'.
+  $form['admin_account']['account']['name']['#default_value'] = 'admin';
+  $form['admin_account']['account']['name']['#attributes']['disabled'] = TRUE;
+  $form['admin_account']['account']['mail']['#default_value'] = 'admin@paraseed.com';
+}
+
+/**
+ * Implements hook_install_tasks().
+ */
+function para_seed_install_tasks(&$install_state) {
+
+  return [
+    'para_seed_extra_components' => [
+      'display_name' => t('Extra components'),
+      'display' => TRUE,
+      'type' => 'form',
+      'function' => AssemblerForm::class,
+    ],
+    'para_seed_assemble_extra_components' => [
+      'display_name' => t('Assemble extra components'),
+      'display' => TRUE,
+      'type' => 'batch',
+    ],
+  ];
+}
+
+/**
+ * Batch job to assemble Varbase extra components.
+ *
+ * @param array $install_state
+ *   The current install state.
+ *
+ * @return array
+ *   The batch job definition.
+ */
+function para_seed_assemble_extra_components(array &$install_state) {
+
+  $batch = [];
+
+  // Install selected extra features.
+  $selected_extra_features = [];
+  $selected_extra_features_configs = [];
+
+  if (isset($install_state['para_seed']['extra_features_values'])) {
+    $selected_extra_features = $install_state['para_seed']['extra_features_values'];
+  }
+
+  if (isset($install_state['para_seed']['extra_features_configs'])) {
+    $selected_extra_features_configs = $install_state['para_seed']['extra_features_configs'];
+  }
+
+  // Get the list of extra features config bits.
+  $extraFeatures = ConfigBit::getList('configbit/extra.components.para_seed.bit.yml', 'show_extra_components', TRUE, 'dependencies', 'profile', 'para_seed');
+
+  // If we do have selected extra features.
+  if (count($selected_extra_features) && count($extraFeatures)) {
+    // Have batch processes for each selected extra features.
+    foreach ($selected_extra_features as $extra_feature_key => $extra_feature_checked) {
+      if ($extra_feature_checked) {
+
+        // If the extra feature was a module and not enabled, then enable it.
+        if (!\Drupal::moduleHandler()->moduleExists($extra_feature_key)) {
+          // Add the checked extra feature to the batch process to be enabled.
+          $batch['operations'][] = ['para_seed_assemble_extra_component_then_install', (array) $extra_feature_key];
+        }
+      }
+    }
+  }
+
+  return $batch;
+}
+
+/**
+ * Batch function to assemble and install needed extra components.
+ *
+ * @param string|array $extra_component
+ *   Name of the extra component.
+ */
+function para_seed_assemble_extra_component_then_install($extra_component) {
+  \Drupal::service('module_installer')->install((array) $extra_component, TRUE);
+}
 
 /**
  * Implements hook_theme().
@@ -79,20 +178,4 @@ function para_seed_preprocess_swiftmailer(&$variables) {
     $variables['site_name'] = t('Osseed');
     $variables['site_slogan'] = '"' . t('The Osseed Drupal8 Installation Profile') . '"';
   }
-}
-
-/**
- * Implements hook_form_FORM_ID_alter() for install_configure_form().
- *
- * Allows the profile to alter the site configuration form.
- */
-function para_seed_form_install_configure_form_alter(&$form, FormStateInterface $form_state) {
-  $form['#submit'][] = 'para_seed_form_install_configure_submit';
-}
-
-/**
- * Submission handler to sync the contact.form.feedback recipient.
- */
-function para_seed_form_install_configure_submit($form, FormStateInterface $form_state) {
-
 }
