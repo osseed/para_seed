@@ -83,10 +83,6 @@
       }
     ],
     "extra": {
-      "installer-types": [
-        "bower-asset",
-        "npm-asset"
-      ],
       "installer-paths": {
         "web/core": [
           "type:drupal-core"
@@ -109,6 +105,11 @@
       }
     },
     "require": {
+        "imagesloaded": "v4.1.4",
+        "masonry": "v4.2.2",
+        "dropzone": "v5.7.2",
+        "blazy": "1.8.2",
+        "slick": "v1.8.1",
         "drupal/admin_toolbar": "^2.0",
         "drupal/config_update": "~1.0",
         "drupal/config_ignore": "~2.0",
