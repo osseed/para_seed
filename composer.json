@@ -18,6 +18,10 @@
       }
     ],
     "extra": {
+      "installer-types": [
+        "bower-asset",
+        "npm-asset"
+      ],
       "installer-paths": {
         "web/core": [
           "type:drupal-core"
@@ -26,7 +30,9 @@
           "type:drupal-module"
         ],
         "web/libraries/{$name}": [
-          "type:drupal-library"
+          "type:drupal-library",
+          "type:bower-asset",
+          "type:npm-asset"
         ],
         "web/profiles/contrib/{$name}": [
           "type:drupal-profile"
@@ -36,6 +42,22 @@
         ],
         "drush/contrib/{$name}": [
           "type:drupal-drush"
+        ],
+        "web/libraries/masonry": ["npm-asset/masonry-layout"]
+      },
+      "drupal-libraries": {
+        "library-directory": "web/libraries",
+        "libraries": [
+          {"name": "objectfitpolyfill", "package": "bower-asset/objectfitpolyfill"},
+          {"name": "chartjs", "package": "bower-asset/chartjs"},
+          {"name": "c3","package": "bower-asset/c3"},
+          {"name": "d3", "package": "bower-asset/d3"},
+          {"name": "dropzone","package": "npm-asset/dropzone"},
+          {"name": "blazy", "package": "npm-asset/blazy"},
+          {"name": "slick", "package": "npm-asset/slick-carousel"},
+          {"name": "jquery-ui-touch-punch", "package": "bower-asset/jqueryui-touch-punch"},
+          {"name": "masonry", "package": "npm-asset/masonry-layout"},
+          {"name": "imagesloaded", "package": "npm-asset/imagesloaded"},
         ]
       }
     },
