@@ -125,6 +125,6 @@
         "enyo/dropzone": "~v5.7",
         "desandro/imagesloaded": "~4.1",
         "desandro/masonry": "~4.2",
-        "slick/slick": "^1.9.0"
+        "kenwheeler/slick": "~1.6"
     }
 }
