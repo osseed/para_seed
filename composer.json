@@ -122,6 +122,6 @@
         "drupal/swiftmailer": "~2.0",
         "drupal/varbase_media": "~7.0",
         "drupal/varbase_heroslider_media": "~7.0",
-        "bower-asset/blazy": "~1.8"
+        "dinbror/blazy": "~1.8"
     }
 }
