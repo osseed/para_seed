@@ -5,8 +5,8 @@
     "license": "GPL-2.0-or-later",
     "authors": [
         {
-            "name": "Tanmay Khedekar",
-            "email": "tanmay@osseed.com"
+          "name": "Tanmay Khedekar",
+          "email": "tanmay@osseed.com"
         },
         {
           "type": "package",
@@ -24,13 +24,16 @@
         {
           "type": "package",
           "package": {
-            "name": "blazy",
+            "name": "dinbror/blazy",
             "version": "1.8.2",
             "type": "drupal-library",
-            "dist": {
-              "url": "https://github.com/dinbror/blazy.git",
+            "extra": {
+              "installer-name": "blazy"
+            },
+            "source": {
               "type": "git",
-              "reference": "master"
+              "url": "https://github.com/dinbror/blazy",
+              "reference": "1.8.2"
             }
           }
         },
@@ -80,9 +83,17 @@
       {
         "type": "composer",
         "url": "https://packages.drupal.org/8"
+      },
+      {
+        "type": "composer",
+        "url": "https://asset-packagist.org"
       }
     ],
     "extra": {
+      "installer-types": [
+        "bower-asset",
+        "npm-asset"
+      ],
       "installer-paths": {
         "web/core": [
           "type:drupal-core"
@@ -105,16 +116,12 @@
       }
     },
     "require": {
-        "imagesloaded": "v4.1.4",
-        "masonry": "v4.2.2",
-        "dropzone": "v5.7.2",
-        "blazy": "1.8.2",
-        "slick": "v1.8.1",
         "drupal/admin_toolbar": "^2.0",
         "drupal/config_update": "~1.0",
         "drupal/config_ignore": "~2.0",
         "drupal/swiftmailer": "~2.0",
         "drupal/varbase_media": "~7.0",
-        "drupal/varbase_heroslider_media": "~7.0"
+        "drupal/varbase_heroslider_media": "~7.0",
+        "bower-asset/blazy": "~1.8"
     }
 }
