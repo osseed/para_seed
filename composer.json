@@ -11,13 +11,12 @@
         {
           "type": "package",
           "package": {
-            "name": "slick",
-            "version": "v1.8.1",
+            "name": "slick/slick",
+            "version": "v1.9.0",
             "type": "drupal-library",
             "dist": {
-              "url": "https://github.com/kenwheeler/slick.git",
-              "type": "git",
-              "reference": "master"
+              "url": "https://github.com/kenwheeler/slick/archive/master.zip",
+              "type": "zip"
             }
           }
         },
@@ -122,6 +121,10 @@
         "drupal/swiftmailer": "~2.0",
         "drupal/varbase_media": "~7.0",
         "drupal/varbase_heroslider_media": "~7.0",
-        "vardot/blazy": "~1.8"
+        "vardot/blazy": "~1.8",
+        "enyo/dropzone": "~v5.7",
+        "desandro/imagesloaded": "~4.1",
+        "desandro/masonry": "~4.2",
+        "slick/slick": "^1.9.0"
     }
 }
