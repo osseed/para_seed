@@ -11,12 +11,16 @@
         {
           "type": "package",
           "package": {
-            "name": "slick/slick",
-            "version": "v1.9.0",
+            "name": "kenwheeler/slick",
+            "version": "v1.8.1",
             "type": "drupal-library",
-            "dist": {
-              "url": "https://github.com/kenwheeler/slick/archive/master.zip",
-              "type": "zip"
+            "extra": {
+              "installer-name": "slick"
+            },
+            "source": {
+              "type": "git",
+              "url": "https://github.com/kenwheeler/slick",
+              "reference": "v1.8.1"
             }
           }
         },
@@ -39,39 +43,48 @@
         {
           "type": "package",
           "package": {
-            "name": "dropzone",
+            "name": "enyo/dropzone",
             "version": "v5.7.2",
             "type": "drupal-library",
-            "dist": {
-              "url": "https://github.com/enyo/dropzone.git",
+            "extra": {
+              "installer-name": "dropzone"
+            },
+            "source": {
               "type": "git",
-              "reference": "master"
+              "url": "https://github.com/enyo/dropzone",
+              "reference": "v5.7.2"
             }
           }
         },
         {
           "type": "package",
           "package": {
-            "name": "masonry",
+            "name": "desandro/masonry",
             "version": "v4.2.2",
             "type": "drupal-library",
-            "dist": {
-              "url": "https://github.com/desandro/masonry.git",
+            "extra": {
+              "installer-name": "masonry"
+            },
+            "source": {
               "type": "git",
-              "reference": "master"
+              "url": "https://github.com/desandro/masonry",
+              "reference": "v4.2.2"
             }
           }
         },
         {
           "type": "package",
           "package": {
-            "name": "imagesloaded",
+            "name": "desandro/imagesloaded",
             "version": "v4.1.4",
             "type": "drupal-library",
-            "dist": {
-              "url": "https://github.com/desandro/imagesloaded.git",
+            "extra": {
+              "installer-name": "imagesloaded"
+            },
+            "source": {
               "type": "git",
-              "reference": "master"
+              "url": "https://github.com/desandro/imagesloaded",
+              "reference": "v4.1.4"
             }
           }
         }
