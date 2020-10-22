@@ -36,6 +36,11 @@ install:
   - mailsystem
   - swiftmailer
   - config_ignore
+  - varbase_core
+  - varbase_admin
+  - varbase_editor
 themes:
-  - bartik
+  - vartheme_bs4
+  - seven
   - claro
+  - vartheme_claro
