@@ -11,22 +11,6 @@
         {
           "type": "package",
           "package": {
-            "name": "kenwheeler/slick",
-            "version": "v1.8.1",
-            "type": "drupal-library",
-            "extra": {
-              "installer-name": "slick"
-            },
-            "source": {
-              "type": "git",
-              "url": "https://github.com/kenwheeler/slick",
-              "reference": "v1.8.1"
-            }
-          }
-        },
-        {
-          "type": "package",
-          "package": {
             "name": "dinbror/blazy",
             "version": "1.8.2",
             "type": "drupal-library",
@@ -37,54 +21,6 @@
               "type": "git",
               "url": "https://github.com/dinbror/blazy",
               "reference": "1.8.2"
-            }
-          }
-        },
-        {
-          "type": "package",
-          "package": {
-            "name": "enyo/dropzone",
-            "version": "v5.7.2",
-            "type": "drupal-library",
-            "extra": {
-              "installer-name": "dropzone"
-            },
-            "source": {
-              "type": "git",
-              "url": "https://github.com/enyo/dropzone",
-              "reference": "v5.7.2"
-            }
-          }
-        },
-        {
-          "type": "package",
-          "package": {
-            "name": "desandro/masonry",
-            "version": "v4.2.2",
-            "type": "drupal-library",
-            "extra": {
-              "installer-name": "masonry"
-            },
-            "source": {
-              "type": "git",
-              "url": "https://github.com/desandro/masonry",
-              "reference": "v4.2.2"
-            }
-          }
-        },
-        {
-          "type": "package",
-          "package": {
-            "name": "desandro/imagesloaded",
-            "version": "v4.1.4",
-            "type": "drupal-library",
-            "extra": {
-              "installer-name": "imagesloaded"
-            },
-            "source": {
-              "type": "git",
-              "url": "https://github.com/desandro/imagesloaded",
-              "reference": "v4.1.4"
             }
           }
         }
@@ -136,7 +72,7 @@
         "drupal/varbase_api": "~7.0",
         "drupal/varbase_media": "~7.0",
         "drupal/varbase_editor": "~7.0",
-        "pranav/paraseed_media": "dev-master",
+        "pranav/paraseed_slider": "dev-main",
         "drupal/varbase_workflow": "^2.0",
         "drupal/vartheme": "~6.0",
         "drupal/vartheme_bs4": "~6.0",
