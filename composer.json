@@ -70,7 +70,6 @@
         "drupal/swiftmailer": "~2.0",
         "drupal/varbase_core": "~8.0",
         "drupal/varbase_api": "~7.0",
-        "drupal/varbase_media": "~7.0",
         "drupal/varbase_editor": "~7.0",
         "pranav/paraseed_slider": "dev-main",
         "drupal/varbase_workflow": "^2.0",
