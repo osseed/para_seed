@@ -19,3 +19,8 @@ config_bit:
           description: "Provides the basis for Landing Pages using <a href=\"https://www.drupal.org/project/paragraphs\" target=\"_blank\">Paragraphs</a> module, which is built to include appealing stacked components.<br />"
           selected: false
           config_form: false
+        paraseed_blog:
+          title: "Paraseed Blog"
+          description: "Provides the necessary tools to build blogs in your website."
+          selected: false
+          config_form: false
