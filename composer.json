@@ -73,6 +73,7 @@
         "drupal/varbase_editor": "~7.0",
         "pranav/paraseed_slider": "dev-main",
         "pranav/paraseed_landing": "dev-master",
+        "pranav/paraseed_blog": "dev-master",
         "drupal/varbase_workflow": "^2.0",
         "drupal/vartheme": "~6.0",
         "drupal/vartheme_bs4": "~6.0",
