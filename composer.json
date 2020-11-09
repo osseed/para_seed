@@ -76,7 +76,7 @@
         "pranav/paraseed_blog": "dev-master",
         "drupal/varbase_workflow": "^2.0",
         "drupal/vartheme": "~6.0",
-        "drupal/vartheme_bs4": "~6.0",
+        "pranav/paraseed_bs4": "dev-master",
         "drupal/vartheme_admin": "~6.0",
         "drupal/vartheme_claro": "^2.1",
         "vardot/blazy": "~1.8",

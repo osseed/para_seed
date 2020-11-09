@@ -39,7 +39,7 @@ install:
   - config_ignore
 themes:
   - bootstrap_barrio
-  - vartheme_bs4
+  - paraseed_bs4
   - seven
   - claro
   - vartheme_claro
