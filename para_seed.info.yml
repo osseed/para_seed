@@ -37,6 +37,7 @@ install:
   - mailsystem
   - swiftmailer
   - config_ignore
+  - paraseed_seo
 themes:
   - bootstrap_barrio
   - paraseed_bs4
